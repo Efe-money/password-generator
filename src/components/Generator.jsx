@@ -52,11 +52,12 @@ const Generator = () => {
   }
 
   return (
+      <div className="cont">
     <div className='container'>
       <form className='formStyle' onSubmit={handleGenerate}>
         <div className="firstCont">
           {/* form title */}
-          <div className="form-group">
+          <div className="header">
             <h5>Password Generator</h5>
           </div>
 
@@ -78,6 +79,7 @@ const Generator = () => {
               onChange={(e) => setpasswordLength(e.target.value)}
             />
           </div>
+          
 
             {/* for passwordlowercase option */}
                   <div className="form-group">
@@ -102,7 +104,7 @@ const Generator = () => {
                   <label htmlFor="Characters">Special characters</label>
                   <input type="checkbox" checked={includeSymbols}onChange={(e)=> setincludeSymbols (e.target.checked)}/>
                   </div>
-                  <div className="form-group">
+                  <div className="formBtn">
                   <button type='submit'>Generate password</button>
                   </div>
 
@@ -110,6 +112,7 @@ const Generator = () => {
         
         </div>
       </form>
+    </div>
     </div>
   );
 }
