@@ -14,7 +14,7 @@ const Generator = () => {
   const handleGenerate = (e) => {
       e.preventDefault()
     if (!includeUppercase && !includeSymbols && !includedigits && !includeLowercase) {
-      console.log("You need to select at least one checkbox");
+         notify("You need to select at least one checkbox");
     } else {
       let characterList = "";
       if (includedigits) {
@@ -33,9 +33,9 @@ const Generator = () => {
       if (!isNaN(passwordLength) && parseInt(passwordLength) >= 8) {
             const generatedPassword = createPassword(characterList); // Generate the password
             setpassword(generatedPassword); // Update the state with the generated password
-            console.log("Password generated successfully");
+            alert("Password generated successfully");
           } else {
-            console.log("Invalid password length. Please enter a valid number >= 8.");
+            alert ("Invalid password length. Please enter a valid number >= 8.");
           }
     
     }
@@ -106,7 +106,7 @@ const Generator = () => {
                   <input type="checkbox" checked={includeSymbols}onChange={(e)=> setincludeSymbols (e.target.checked)}/>
                   </div>
                   <div className="formBtn">
-                  <button type='submit'>Generate password</button>
+                  <button className='bg-primary' type='submit'>Generate password</button>
                   </div>
 
 
