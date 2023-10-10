@@ -77,6 +77,7 @@ const Generator = () => {
               max="20"
               min="8"
               onChange={(e) => setpasswordLength(e.target.value)}
+              required
             />
           </div>
           
